@@ -1,6 +1,6 @@
 {
   "name": "generator-ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ui-component Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
