@@ -1,0 +1,49 @@
+{
+  "packages": [
+    {
+      "name": "Hogan.js",
+      "description": "Templating engine",
+      "url": "http://twitter.github.io/hogan.js/"
+    },
+    {
+      "name": "Bootstrap",
+      "description": "Responsive CSS framework",
+      "url": "http://getbootstrap.com/"
+    },
+    {
+      "name": "Font Awesome",
+      "description": "Font icons",
+      "url": "https://fortawesome.github.io/Font-Awesome/"
+    },
+    {
+      "name": "Less",
+      "description": "CSS Preprocessor",
+      "url": "http://lesscss.org/"
+    },
+    {
+      "name": "Lesshat",
+      "description": "Less mixin library",
+      "url": "http://lesshat.madebysource.com/"
+    },
+    {
+      "name": "The Intern",
+      "description": "Testing framework",
+      "url": "https://theintern.github.io/"
+    },
+    {
+      "name": "Grunt",
+      "description": "Task runner",
+      "url": "http://gruntjs.com/"
+    },
+    {
+      "name": "jQuery",
+      "description": "Feature-rich JavaScript library",
+      "url": "https://jquery.com/"
+    },
+    {
+      "name": "RequireJS",
+      "description": "Asynchronous JavaScript file and module loader",
+      "url": "http://requirejs.org/"
+    }
+  ]
+}

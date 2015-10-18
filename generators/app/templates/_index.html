@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title><%= projectName %></title>
+
+    <script src="node_modules/requirejs/require.js" data-main="js/app.min.js"></script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><%= projectName %></h1>
+        <p>Congrats! You've successfully scaffolded your brand new project.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/fknussel/generator-ui" role="button">Browse the docs</a></p>
+      </div>
+
+      <div id="packages"></div>
+    </div>
+  </body>
+</html>

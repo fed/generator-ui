@@ -9,15 +9,23 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the premium ' + chalk.red('Ui') + ' generator!'
+      'Welcome to the premium ' + chalk.red('ui') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {
+        type: 'input',
+        name: 'projectName',
+        message: 'What\'s your project name?',
+        default: 'Untitled Project'
+      },
+      {
+        type: 'input',
+        name: 'repository',
+        message: 'Enter your repository URL',
+        default: 'https://github.com/some-user/some-repo.git'
+      }
+    ];
 
     this.prompt(prompts, function (props) {
       this.props = props;
@@ -29,17 +37,46 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      this.fs.copy(
+      this.directory(
+        this.templatePath('/_css'),
+        this.destinationPath('/css')
+      );
+      this.directory(
+        this.templatePath('/_js'),
+        this.destinationPath('/js')
+      );
+      this.directory(
+        this.templatePath('/_model'),
+        this.destinationPath('/model')
+      );
+      this.directory(
+        this.templatePath('/_tests'),
+        this.destinationPath('/tests')
+      );
+      this.fs.copyTpl(
+        this.templatePath('_index.html'),
+        this.destinationPath('index.html'),
+        { projectName: this.props.projectName }
+      );
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.destinationPath('package.json'),
+        {
+          projectName: this.props.projectName,
+          repository: this.props.repository
+        }
       );
       this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
+        this.templatePath('_Gruntfile.js'),
+        this.destinationPath('Gruntfile.js')
       );
     },
 
     projectfiles: function () {
+      this.fs.copy(
+        this.templatePath('_README.md'),
+        this.destinationPath('README.md')
+      );
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -48,10 +85,18 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('jshintrc'),
         this.destinationPath('.jshintrc')
       );
+      this.fs.copy(
+        this.templatePath('csslintrc'),
+        this.destinationPath('.csslintrc')
+      );
+      this.fs.copy(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore')
+      );
     }
   },
 
   install: function () {
-    this.installDependencies();
+    this.installDependencies({ bower: false });
   }
 });
