@@ -1,0 +1,24 @@
+css:
+  - compass
+  - csslint
+  - rename
+js:
+  - jshint
+  - hogan
+  - requirejs
+json:
+  - jsonlint
+build:
+  - css
+  - js
+  - json
+test:
+  - build
+  - intern
+start:
+  - build
+  - intern
+  - connect
+  - watch
+default:
+  - start

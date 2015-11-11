@@ -1,5 +1,5 @@
 {
-  "packages": [
+  "features": [
     {
       "name": "Hogan.js",
       "description": "Templating engine",
@@ -11,19 +11,14 @@
       "url": "http://getbootstrap.com/"
     },
     {
-      "name": "Font Awesome",
-      "description": "Font icons",
-      "url": "https://fortawesome.github.io/Font-Awesome/"
-    },
-    {
-      "name": "Less",
+      "name": "Sass",
       "description": "CSS Preprocessor",
-      "url": "http://lesscss.org/"
+      "url": "http://sass-lang.com/"
     },
     {
-      "name": "Lesshat",
-      "description": "Less mixin library",
-      "url": "http://lesshat.madebysource.com/"
+      "name": "Compass",
+      "description": "Sass mixin library",
+      "url": "http://compass-style.org/"
     },
     {
       "name": "The Intern",

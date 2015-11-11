@@ -1,29 +1,43 @@
 {
-  "name": "your-app-name",
+  "name": "<%= project %>",
   "version": "0.0.0",
-  "repository": "https://github.com/some-user/some-repo.git",
-  "description": "Write a brief description here",
-  "license": "MIT",
+  "description": "<%= description %>",
+  "license": "<%= license %>",
+  "author": {
+    "name": "<%= username %>",
+    "email": "<%= email %>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= repository %>"
+  },
+  "scripts": {
+    "start": "./node_modules/grunt-cli/bin/grunt",
+    "build": "./node_modules/grunt-cli/bin/grunt build",
+    "test": "./node_modules/grunt-cli/bin/grunt test"
+  },
   "dependencies": {
-    "bootstrap": "latest",
-    "hogan.js": "latest",
-    "jquery": "latest",
-    "requirejs": "latest",
-    "font-awesome": "latest"
+    "bootstrap": "^3.3.5",
+    "hogan.js": "^3.0.2",
+    "jquery": "^2.1.4",
+    "requirejs": "^2.1.20"
   },
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-contrib-bump": "git+https://github.com/gruntjs/grunt-contrib-bump.git",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-csslint": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.13.0",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-less": "^1.0.1",
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-compass": "^1.0.4",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-csslint": "^0.4.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-rename": "0.0.3",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-git-committers": "^0.1.2",
     "grunt-hogan": "^0.3.0",
     "grunt-jsonlint": "^1.0.4",
-    "intern": "^3.0.0",
-    "lesshat": "^3.0.2"
+    "grunt-templated-changelog": "^0.1.3",
+    "intern": "^3.0.6",
+    "load-grunt-config": "^0.16.0"
   }
 }

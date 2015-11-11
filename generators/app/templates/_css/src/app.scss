@@ -1,0 +1,45 @@
+@import "_variables";
+
+html {
+  background-color: $color-white;
+  color: $color-text;
+  font-family: $font-brand;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+body {
+  padding-top: 2*$offset-vertical;
+  padding-bottom: 2*$offset-vertical;
+}
+
+a {
+  color: $color-link;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.jumbotron {
+  background-color: $color-yellow;
+  color: $color-white;
+  text-align: center;
+}
+
+.jumbotron,
+.features {
+  padding-left: $offset-horizontal;
+  padding-right: $offset-horizontal;
+}
+
+footer {
+  border-top: 1px solid adjust-lightness($color-text, 60%);
+  color: adjust-lightness($color-text, 40%);
+  margin-top: 2*$offset-vertical;
+  padding-top: $offset-vertical;
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .container {
+    max-width: 730px;
+  }
+}

@@ -6,8 +6,8 @@ require.config({
   }
 });
 
-requirejs(['jquery', 'packages'], function ($, packages) {
-  packages.generate(function (data) {
-    $('#packages').html(data);
+requirejs(['jquery', 'features'], function ($, features) {
+  features.generate(function (data) {
+    $('.features').html(data);
   });
 });
