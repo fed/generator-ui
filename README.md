@@ -1,22 +1,19 @@
 # generator-ui
 
-A Yeoman generator for scaffolding simple standalone UI components.
-
-![Yeoman](/yeoman.png)
+A Yeoman generator for scaffolding simple web frontends. I personally use this as the base for my GitHub page.
 
 ## Built-in Packages
 
-* [Less](http://lesscss.org/): CSS Preprocessor
-* [Lesshat](http://lesshat.madebysource.com/): Less mixin library
+* [Sass](http://sass-lang.com/): CSS Preprocessor
+* [Compass](http://compass-style.org/): Sass mixin library
 * [Bootstrap](http://getbootstrap.com/): Responsive CSS framework
-* [Font Awesome](https://fortawesome.github.io/Font-Awesome/): Font icons
 * [RequireJS](http://requirejs.org/): Asynchronous JavaScript file and module loader
 * [jQuery](https://jquery.com/): Feature-rich JavaScript library
-* [Hogan.js](http://twitter.github.io/hogan.js/): Templating engine
+* [Hogan.js](http://twitter.github.io/hogan.js/): Template engine
 * [The Intern](https://theintern.github.io/): Testing framework
-* [Grunt](http://gruntjs.com/): Task runner
+* [Grunt](http://gruntjs.com/): JavaScript task runner
 
-## Creating a new ui-component
+## Creating a new project
 
 1. Setup [npm](https://nodejs.org/) properly for your development environment.
 
@@ -26,13 +23,13 @@ A Yeoman generator for scaffolding simple standalone UI components.
 npm install -g yo grunt-cli
 ```
 
-3. Install the [ui-component](https://github.com/fknussel/generator-ui) generator:
+3. Install the [ui](https://github.com/fknussel/generator-ui) generator:
 
 ```
 npm install -g generator-ui
 ```
 
-4. Create a new directory and initialize a Git repo on it for your new ui-component:
+4. Create a new directory and initialize a Git repo on it for your new project:
 
 ```
 mkdir your-project
@@ -41,15 +38,15 @@ git init
 git remote add origin https://github.com/some-user/some-project.git
 ```
 
-7. Run the generator:
+5. Run the generator:
 
 ```
 yo ui
 ```
 
-8. Answer the questions.
+6. Answer the questions.
 
-9. **STRONGLY RECOMMENDED:** commit the generated code to your git repository before making any modifications. This will make it much easier to see a diff of the work you have done vs. the generator output.
+7. **STRONGLY RECOMMENDED:** commit the generated code to your git repository before making any modifications. This will make it much easier to see a diff of the work you have done vs. the generator output.
 
 ```
 git add --all
@@ -58,7 +55,7 @@ git commit -m "Initial commit"
 
 ## Your code
 
-See the `README.md` file in your newly created ui-component for more information.
+See the `README.md` file in your newly created project for more information.
 
 ## Release Versions
 
